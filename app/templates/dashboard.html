@@ -1,0 +1,8 @@
+{% extends "base.html" %}
+{% block title %}Member space · {{ brand.name }}{% endblock %}
+{% block content %}
+<section class="hero"><p class="eyebrow">Private dashboard</p><h1>Your member space</h1><p class="lede">Welcome, {{ user.username }}.</p><p>You are signed in as a <strong>{{ user.role }}</strong>. This page is available only with an active session.</p></section>
+<section class="panel"><h2>Your next step</h2><p>Explore the <a href="/">public portfolio</a> or inspect <a href="/api/me">your public account details</a>.</p>
+{% if features.roles and user.role == 'admin' %}<p><a href="/admin">Open administration →</a></p>{% endif %}
+<form action="/logout" method="post"><input type="hidden" name="csrf_token" value="{{ csrf_token }}"><button class="button" type="submit">Log out</button></form></section>
+{% endblock %}

@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+{% block title %}{{ 'Create account' if action == 'signup' else 'Log in' }} · {{ brand.name }}{% endblock %}
+{% block content %}
+<section class="form-stack">
+<p class="eyebrow">{{ brand.name }} / Member access</p>
+<h1>{{ 'Create account' if action == 'signup' else 'Log in' }}</h1>
+<p>{{ 'Create a local member account. Choose a unique passphrase for local testing; do not reuse an existing account password.' if action == 'signup' else 'Log in to your private member space.' }}</p>
+{% if request.query_params.get('created') == '1' and action == 'login' %}<p class="notice">Your account is ready. Log in to continue.</p>{% endif %}
+{% if error %}<p role="alert">{{ error }}</p>{% endif %}
+<form method="post" action="/{{ action }}">
+<input type="hidden" name="csrf_token" value="{{ csrf_token }}">
+<label for="username">Username</label><input id="username" name="username" value="{{ username }}" minlength="{{ 3 if action == 'signup' else 1 }}" maxlength="32" autocomplete="username" required aria-describedby="username-help">
+<p id="username-help" class="muted">3–32 letters, numbers or underscores. Usernames are case-insensitive.</p>
+<label for="password">Password</label><input id="password" type="password" name="password" minlength="{{ 15 if action == 'signup' else 1 }}" maxlength="128" autocomplete="{{ 'new-password' if action == 'signup' else 'current-password' }}" required aria-describedby="password-help">
+<p id="password-help" class="muted">{{ 'Use 15–128 characters. A long, unique passphrase works well.' if action == 'signup' else 'Enter the password you chose for this local account.' }}</p>
+<button class="button" type="submit">{{ 'Create account' if action == 'signup' else 'Log in' }}</button>
+</form>
+<p>{% if action == 'signup' %}Already have an account? <a href="/login">Log in</a>.{% else %}New here? <a href="/signup">Create an account</a>.{% endif %}</p>
+</section>
+{% endblock %}

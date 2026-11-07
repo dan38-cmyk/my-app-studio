@@ -14,7 +14,7 @@ Short AI-assisted summary, not a transcript or grade. Observations and decisions
 - Keep decision: Keep the revised homepage because the prominent facts help catch a recruiter’s attention.
 - Review: Reviewed for accuracy before conditional publication approval.
 - Help/gaps: I supplied IS117 Parts 1–3, my DegreeWorks audit and my résumé, and requested stronger recruiter-facing descriptions. AI helped implement the homepage, draft the copy and styling, add the course/work history, and run the checks. The original prediction remains missing; the completed App Studio homepage does not establish completion of the separate IS117 final.
-- Evidence links / next step: [Issue #2](https://github.com/dan38-cmyk/my-app-studio/issues/2); implementation and actual checks in [SPEC.md](SPEC.md). PR, GitHub CI and merge pending.
+- Evidence links / next step: [Issue #2](https://github.com/dan38-cmyk/my-app-studio/issues/2) closed; [PR #5](https://github.com/dan38-cmyk/my-app-studio/pull/5) merged with both CI jobs passing. Actual implementation/check links are in [SPEC.md](SPEC.md).
 
 ## APP-002
 
@@ -24,7 +24,7 @@ Short AI-assisted summary, not a transcript or grade. Observations and decisions
 - Keep decision: Keep the account features because they worked as expected in my tests.
 - Review: Reviewed for accuracy before conditional publication approval.
 - Help/gaps: AI connected the prepared security helpers to the browser forms and API routes and ran the full checks. My answer identifying improper session invalidation was edited for grammar. The original prediction remains missing.
-- Evidence links / next step: [Issue #3](https://github.com/dan38-cmyk/my-app-studio/issues/3); implementation and actual checks in [SPEC.md](SPEC.md). PR, GitHub CI and merge pending.
+- Evidence links / next step: [Issue #3](https://github.com/dan38-cmyk/my-app-studio/issues/3) closed; [PR #6](https://github.com/dan38-cmyk/my-app-studio/pull/6) merged with both CI jobs passing. Actual implementation/check links are in [SPEC.md](SPEC.md).
 
 ## APP-003
 

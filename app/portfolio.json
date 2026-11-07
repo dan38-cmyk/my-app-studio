@@ -1,0 +1,242 @@
+{
+  "audit_date": "November 6, 2026",
+  "in_progress_term": "Fall 2026",
+  "courses": {
+    "in_progress": [
+      {
+        "code": "IS 117",
+        "title": "Intro to Website Development"
+      },
+      {
+        "code": "IS 247",
+        "title": "Designing the User Experience"
+      },
+      {
+        "code": "IS 265",
+        "title": "Intro to Information Systems"
+      },
+      {
+        "code": "IS 373",
+        "title": "Content Management Systems"
+      },
+      {
+        "code": "IT 490",
+        "title": "Systems Integration"
+      },
+      {
+        "code": "YWCC 307",
+        "title": "Professional Development in Computing"
+      }
+    ],
+    "completed": [
+      {
+        "code": "IT 491",
+        "title": "Information Technology Capstone"
+      },
+      {
+        "code": "IT 420",
+        "title": "Computer Systems and Networks"
+      },
+      {
+        "code": "IT 340",
+        "title": "Introduction to System Administration"
+      },
+      {
+        "code": "IS 331",
+        "title": "Database Design, Management & Applications"
+      },
+      {
+        "code": "IT 202",
+        "title": "Internet Applications"
+      },
+      {
+        "code": "IT 201",
+        "title": "Information Design Techniques"
+      },
+      {
+        "code": "IT 310",
+        "title": "E-Commerce Technology"
+      },
+      {
+        "code": "IT 220",
+        "title": "Wireless Networks"
+      },
+      {
+        "code": "IS 350",
+        "title": "Computers, Society and Ethics"
+      },
+      {
+        "code": "YWCC 207",
+        "title": "Computing & Effective Communication"
+      },
+      {
+        "code": "HRM 301",
+        "title": "Organizational Behavior"
+      },
+      {
+        "code": "COM 312",
+        "title": "Oral Presentation"
+      },
+      {
+        "code": "PHIL 334",
+        "title": "Engineering Ethics"
+      },
+      {
+        "code": "HSS 404",
+        "title": "HSS Senior Seminar"
+      },
+      {
+        "code": "MATH 138",
+        "title": "General Calculus I"
+      },
+      {
+        "code": "MATH 105",
+        "title": "Elementary Probability & Statistics"
+      },
+      {
+        "code": "PHYS 203",
+        "title": "The Earth in Space"
+      }
+    ],
+    "bergen": [
+      {
+        "code": "INF103",
+        "title": "Intro to Programming (Python)"
+      },
+      {
+        "code": "CIS265",
+        "title": "Advanced Programming Concepts"
+      },
+      {
+        "code": "INF101",
+        "title": "Introduction to Information Technology"
+      },
+      {
+        "code": "INF160",
+        "title": "Networking Technology"
+      },
+      {
+        "code": "CIS277",
+        "title": "Data Structures & Algorithms"
+      },
+      {
+        "code": "INF208",
+        "title": "Systems Analysis & Design"
+      },
+      {
+        "code": "CIS165",
+        "title": "Fundamentals of Programming"
+      },
+      {
+        "code": "CIS288",
+        "title": "Discrete Mathematics"
+      },
+      {
+        "code": "INF236",
+        "title": "Java Programming"
+      },
+      {
+        "code": "WRT101",
+        "title": "English Composition I"
+      },
+      {
+        "code": "WRT201",
+        "title": "English Composition II"
+      },
+      {
+        "code": "HIS101",
+        "title": "Western Civilization to the Reformation"
+      },
+      {
+        "code": "ECO101",
+        "title": "Macroeconomics"
+      },
+      {
+        "code": "PHY114",
+        "title": "Meteorology"
+      },
+      {
+        "code": "COM100",
+        "title": "Speech Communication"
+      },
+      {
+        "code": "LAN113",
+        "title": "Spanish I"
+      },
+      {
+        "code": "ANT100",
+        "title": "Introduction to Anthropology"
+      },
+      {
+        "code": "ART101",
+        "title": "Art Appreciation"
+      },
+      {
+        "code": "PHR101",
+        "title": "Introduction to Philosophy"
+      },
+      {
+        "code": "PHR103",
+        "title": "Basic Logic"
+      },
+      {
+        "code": "PHR100",
+        "title": "Reasoning"
+      },
+      {
+        "code": "MAT160",
+        "title": "Intermediate Algebra"
+      },
+      {
+        "code": "MAT180",
+        "title": "Precalculus: College Algebra & Trigonometry"
+      }
+    ]
+  },
+  "experience": [
+    {
+      "role": "Inventory Specialist",
+      "company": "Ultimate Product Distributors",
+      "location": "Hackensack, NJ",
+      "dates": "Jan 2024 – Present",
+      "highlights": [
+        "Led the transition from paper-based inventory to Fishbowl, increasing operational efficiency by 8%.",
+        "Led cross-departmental staff training and deployed the new inventory system within two weeks.",
+        "Reduced inventory discrepancies by 11% through process standardization and data accuracy improvements."
+      ]
+    },
+    {
+      "role": "Area Manager II",
+      "company": "Amazon",
+      "location": "Staten Island, NY",
+      "dates": "Mar 2021 – Nov 2023",
+      "highlights": [
+        "Co-managed a shift of over 500 associates and process assistants as one of three Area Managers.",
+        "Built and maintained an Excel defect-tracking dashboard using refreshed Amazon data feeds to track scan rate, delivery accuracy compliance and safety incidents, helping reduce mistakes by 2% week over week.",
+        "Served as Delivery Estimated Accuracy champion, aligning standard work across shifts, investigating delivery discrepancies and developing targeted action plans."
+      ]
+    },
+    {
+      "role": "Area Manager I",
+      "company": "Amazon",
+      "location": "Staten Island, NY",
+      "dates": "Nov 2019 – Mar 2021",
+      "highlights": [
+        "Coached process assistants and associates, contributing to multiple promotions and improved team performance.",
+        "Managed cross-departmental projects to meet deadlines and quality standards.",
+        "Coordinated with departments and regional sites to share best practices and streamline operations."
+      ]
+    },
+    {
+      "role": "Process Assistant",
+      "company": "Amazon",
+      "location": "Teterboro, NJ",
+      "dates": "Oct 2018 – Aug 2020",
+      "highlights": [
+        "Supported labor planning, workflow allocation and production-goal tracking.",
+        "Led team huddles, assigned roles and monitored performance metrics, achieving top metrics for the shift corner.",
+        "Provided coaching using real-time operational data."
+      ]
+    }
+  ]
+}

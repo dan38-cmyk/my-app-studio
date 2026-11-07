@@ -7,6 +7,11 @@ import re
 BRAND_FILE = Path(__file__).with_name("brand.json")
 
 
+def load_portfolio():
+    """Read selected public coursework and résumé content, excluding private records."""
+    return json.loads(Path(__file__).with_name("portfolio.json").read_text("utf-8"))
+
+
 def load_brand():
     """Read saved brand choices on each request so previews reflect text edits."""
     brand = json.loads(BRAND_FILE.read_text(encoding="utf-8"))

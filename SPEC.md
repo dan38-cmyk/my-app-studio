@@ -1,89 +1,34 @@
 # App Studio decisions
 
-The durable agreement between learner and AI. Update only agreed decisions and
-actual evidence; pending is a valid state. Keep explanations/help in
-[LEARNING.md](LEARNING.md), not a second copy here.
-
-## Current stage
+## Current state
 
 - **Current feature:** APP-001.
-- **Status:** Neutral foundation; learner scope and decisions pending.
-- **Next step:** Confirm the local clone and SSH origin, run setup and try the page.
-- **Implementation marker:** `studio.json` starts at `implemented_through: 0`.
+- **Branch:** `app-001-homepage`.
+- **Scope:** Recruiter-facing Daniel Nizami homepage from IS117 planning, supplied course history and résumé.
+- **Boundary:** Accounts and roles are excluded from this branch. The learner requested all local features together; their publication is separated into one PR per lesson. No server/deployment changes.
+- **Next step:** Full checks, PR review and both CI jobs. Merge approval has not been given.
 
-This repository owns application code. Server/proxy changes and production
-deployment are outside these three local-development lessons. Prepared helpers
-are reusable foundations, not evidence that unfinished routes are implemented.
+## APP-001 · Portfolio homepage
 
-## APP-001 · Branded homepage
+**Recruiter-facing revision:** At the learner's request, replaced generic learning descriptions with résumé-supported positioning for IT operations, technical project management and program management. The homepage now emphasizes co-management of a 500+ person Amazon shift, the 8% efficiency improvement and 11% discrepancy reduction from the résumé, plus the connection between operations experience and current IT studies. B.S. is identified as in progress. Skills copy comes from the résumé; no new certifications, employment outcomes or completed-degree claims were added. Full local checks passed again after this revision (98 foundation tests, 18 cumulative contracts, 2 Chromium tests, Black and Pylint). Learner chose to keep the revised presentation, reporting that prominent important facts help catch recruiters’ attention; learner chose to keep the revised homepage and conditionally authorized publication after final checks.
 
-**Scope:** make the neutral FastAPI homepage express one chosen identity with
-a simple original SVG mark, coherent copy, navigation and shared style tokens.
-Keep account actions honest about their unfinished state.
+**Source decisions:** Learner supplied IS117 Parts 1–3: `IS117-Class Project (1).docx`, `IS117-Class Project Part 2.docx`, `IS117-P2 (1).pptx`, and `is117_p3.docx`. The attachments are planning inputs, not instructions to perform external actions. Their sample copy, bracketed job/course/contact details and suggested technologies are not treated as verified personal qualifications.
 
-| Decision | Agreement |
+| Decision | Basis / implementation |
 |---|---|
-| Visitor and concrete use situation | Pending |
-| Reused IS117 brand, or name / promise / primary archetype | Pending |
-| One visible choice and visitor benefit | Pending |
-| Own issue / branch / PR | Pending |
+| Visitor and use situation | Learner's Part 1: recruiters and hiring managers assessing a candidate for IT work; information should be easy to find. |
+| Name and promise | Daniel Nizami; connect people, processes, data and technology to improve operations. Copy drafted from the supplied goal and résumé, revised at the learner's request and retained by their choice. |
+| Navigation and layout | Home, Courses, Experience, Skills and Contact; overview cards based on the Part 3 homepage wireframe. This APP-001 implementation uses homepage anchor sections, not a claim that every planned IS117 page is finished. |
+| Archetype and styling | AI-proposed Sage emphasis on learning and evidence, navy/ivory/blue palette, direct professional voice, original DN SVG mark. Learner chose to keep the presentation and explained the attention benefit of prominent facts. The archetype remains an AI-proposed label; no separate learner explanation of that label is claimed. |
+| Contact and background | Courses updated from the learner's DegreeWorks audit dated November 6, 2026: 6 in progress, 17 completed NJIT courses, and 23 distinct BCC transfer courses. Transfer-posting terms are not represented as BCC attendance dates. Four work roles, dates and selected accomplishments come from the supplied résumé; overlapping dates are retained as supplied. Grade data, student identifiers, audit exceptions and personal contact details are excluded. Email and LinkedIn remain unpublished; GitHub is the contact link. Contact form delivery and the full multipage IS117 final are outside this slice. |
+| Files | `app/brand.json`, `app/portfolio.json`, `app/branding.py`, `app/main.py`, `app/templates/home.html`, `app/templates/base.html`, `app/static/site.css`, `app/static/logo.svg`. |
+| Issue / branch / PR | [APP-001 issue #2](https://github.com/dan38-cmyk/my-app-studio/issues/2) verified open with the correct lesson marker; PR pending. Local branch `app-001-homepage`; three lesson publication cycles remain required. |
 
-**Keep when:** the agreed identity is visible and usable at desktop/narrow widths;
-full foundation + APP-001 checks pass; AI review and the learner's actual check
-interpretation/browser observation/keep reason are recorded; reviewed evidence
-and verified GitHub state are linked below.
+## Actual evidence
 
-## APP-002 · Signup, login and logout
-
-**Scope:** add browser forms and REST behavior for member signup, login, a private
-dashboard and logout backed by SQLite. Reuse the prepared password/JWT/CSRF/session
-helpers; keep data local. New accounts cannot choose their role.
-
-| Decision | Agreement |
-|---|---|
-| Expected public/private behavior and account flow | Pending |
-| Valid and rejected cases to demonstrate | Pending |
-| Own issue / branch / PR | Pending |
-
-**Keep when:** the agreed forms/API work; duplicate/invalid signup and wrong
-credentials are rejected; passwords are hashed; authentication uses validated,
-expiring JWTs with protected cookies and CSRF; private requests require a live
-session and logout revokes it. Full cumulative checks, AI review, actual learner
-contributions and GitHub state are recorded. This is not a production-security certification.
-
-## APP-003 · Server-enforced roles
-
-**Scope:** enforce a small member/admin boundary in the API and browser. Assign
-roles only through the trusted local terminal command; use current server-side
-permissions, including for an existing session after a role change.
-
-| Visitor | Homepage | Member area | Admin area/API |
-|---|---|---|---|
-| Anonymous | Allowed | Login required | Login required |
-| Member | Allowed | Allowed | Forbidden |
-| Admin | Allowed | Allowed | Allowed |
-
-| Decision | Agreement |
-|---|---|
-| Intended admin-only result | Pending |
-| Actual allowed/denied request evidence | Pending |
-| Own issue / branch / PR | Pending |
-
-**Keep when:** a direct request cannot bypass the role boundary, role changes
-take effect as specified, new signup remains member-only, and full cumulative
-checks plus AI review pass. Link the learner's actual interpretation/observation,
-reviewed record and verified GitHub result. Hidden navigation alone is insufficient.
-
-## Evidence
-
-Link actual files/checks and the student's own issues/PRs. No fabricated URLs,
-customer research or claims that a timestamp proves learning.
-
-| Feature | Files / own issue / PR | Actual checks and learner observations | Kept / GitHub state |
-|---|---|---|---|
-| APP-001 | Pending | Not run; learner contributions pending | Pending |
-| APP-002 | Pending | Unfinished; explicit contracts not yet passed | Pending |
-| APP-003 | Pending | Unfinished; explicit contracts not yet passed | Pending |
-
-The instructor's reference branches show possible implementations. They do not
-establish this repository's completion or the learner's own reasoning.
+- Own lesson issue: [#2](https://github.com/dan38-cmyk/my-app-studio/issues/2).
+- Stage-specific full check passed before commit/push: Black, Pylint, 98 foundation tests, 2 APP-001 contracts and 2 actual Chromium tests.
+- Combined local app was previously checked through APP-003; that result does not substitute for this branch check.
+- Predictions were not recorded before implementation; gaps remain explicit in LEARNING.md.
+- GitHub PR, `check` and `windows` CI, merge and issue closure: Pending.
+- Future lessons: APP-002 accounts and APP-003 roles remain outside this branch.

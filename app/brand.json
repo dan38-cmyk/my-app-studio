@@ -1,16 +1,20 @@
 {
-  "name": "Your Project",
-  "audience": "Not chosen yet",
-  "archetype": "Not chosen yet",
-  "promise": "Not chosen yet",
-  "headline": "A small idea. A real application.",
-  "summary": "This working page is your starting point. Give it a purpose and a brand, then build accounts and permissions one feature at a time.",
-  "voice": ["Not chosen yet"],
-  "design_direction": "Not chosen yet",
+  "name": "Daniel Nizami",
+  "audience": "IT recruiters and hiring managers reviewing education, experience and practical projects",
+  "archetype": "Sage (AI-proposed): learning, evidence and clear explanations",
+  "promise": "I connect the people doing the work with the processes, data and technology that help them do it better.",
+  "headline": "Turning operational challenges into better systems.",
+  "summary": "I'm Daniel Nizami, an operations leader and Information Technology student at NJIT. I've co-managed a 500+ person shift at Amazon and led a digital inventory rollout at Ultimate Product Distributors. I bring team leadership, a practical approach to data and a growing technical foundation to opportunities in IT operations and technical project management.",
+  "voice": [
+    "Direct",
+    "Professional",
+    "Approachable"
+  ],
+  "design_direction": "Navy and ivory editorial portfolio with clear navigation and overview cards based on the IS117 wireframe. Palette and archetype are AI proposals for review.",
   "palette": {
-    "ink": "#182C34",
-    "paper": "#F6F5EF",
-    "accent": "#285A50",
+    "ink": "#172B45",
+    "paper": "#F6F5F0",
+    "accent": "#2458A6",
     "surface": "#FFFFFF"
   }
 }

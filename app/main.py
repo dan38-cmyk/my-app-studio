@@ -32,6 +32,7 @@ def create_app(settings=None):
     application.state.settings = settings
     application.state.current_user = security.authenticate
     application.state.brand = branding.load_brand
+    application.state.portfolio = branding.load_portfolio
     application.state.templates = Jinja2Templates(directory=APP_ROOT / "templates")
     application.state.live_reload = (
         settings.mode == "development" and os.getenv("STUDIO_LIVE_RELOAD", "1") == "1"

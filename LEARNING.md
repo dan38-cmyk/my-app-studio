@@ -35,4 +35,4 @@ Short AI-assisted summary, not a transcript or grade. Observations and decisions
 - Keep decision: Keep the role features because the member/admin behavior worked as expected in my tests.
 - Review: Reviewed for accuracy; publication authorized only after pre-push checks pass. Merge approval has not been given.
 - Help/gaps: AI implemented and tested the server-side permission checks and supplied the local role-change commands and the suggested explanation above. My reported results are separate from the automated checks. The original prediction remains missing.
-- Evidence links / next step: [Issue #4](https://github.com/dan38-cmyk/my-app-studio/issues/4); implementation and actual checks in [SPEC.md](SPEC.md). PR, GitHub CI and merge pending.
+- Evidence links / next step: [Issue #4](https://github.com/dan38-cmyk/my-app-studio/issues/4), [PR #7](https://github.com/dan38-cmyk/my-app-studio/pull/7); implementation and actual check links in [SPEC.md](SPEC.md). Latest PR CI, owner-approved merge, issue closure and final main checks must be verified before completion.

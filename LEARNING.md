@@ -18,7 +18,13 @@ Short AI-assisted summary, not a transcript or grade. Observations and decisions
 
 ## APP-002
 
-Pending. Account implementation and learner records will be published in their own lesson PR.
+- Prediction: Pending. No before/after-login prediction was recorded.
+- Check interpretation: The copied-cookie-after-logout check catches improper session invalidation, where an old login cookie could still grant account access after logout.
+- Browser observation: I created an account, accessed the private dashboard, logged out and logged back in successfully.
+- Keep decision: Keep the account features because they worked as expected in my tests.
+- Review: Reviewed for accuracy before conditional publication approval.
+- Help/gaps: AI connected the prepared security helpers to the browser forms and API routes and ran the full checks. My answer identifying improper session invalidation was edited for grammar. The original prediction remains missing.
+- Evidence links / next step: [Issue #3](https://github.com/dan38-cmyk/my-app-studio/issues/3); implementation and actual checks in [SPEC.md](SPEC.md). PR, GitHub CI and merge pending.
 
 ## APP-003
 

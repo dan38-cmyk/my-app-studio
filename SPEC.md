@@ -2,10 +2,10 @@
 
 ## Current state
 
-- **Current feature:** APP-001.
-- **Branch:** `app-001-homepage`.
+- **Current feature:** APP-002 (includes APP-001).
+- **Branch:** `app-002-accounts`.
 - **Scope:** Recruiter-facing Daniel Nizami homepage from IS117 planning, supplied course history and résumé.
-- **Boundary:** Accounts and roles are excluded from this branch. The learner requested all local features together; their publication is separated into one PR per lesson. No server/deployment changes.
+- **Boundary:** Accounts are implemented in this branch; role implementation remains excluded. The learner requested all local features together; their publication is separated into one PR per lesson. No server/deployment changes.
 - **Next step:** Full checks, PR review and both CI jobs. Merge approval has not been given.
 
 ## APP-001 · Portfolio homepage
@@ -24,11 +24,22 @@
 | Files | `app/brand.json`, `app/portfolio.json`, `app/branding.py`, `app/main.py`, `app/templates/home.html`, `app/templates/base.html`, `app/static/site.css`, `app/static/logo.svg`. |
 | Issue / branch / PR | [APP-001 issue #2](https://github.com/dan38-cmyk/my-app-studio/issues/2) verified open with the correct lesson marker; PR pending. Local branch `app-001-homepage`; three lesson publication cycles remain required. |
 
+## APP-002 · Accounts
+
+**Authorized scope:** Signup, login, private dashboard and logout, through browser forms and JSON APIs. The public portfolio remains accessible without login. Accounts use the prepared SQLite, Argon2id password hashing, signed expiring JWT cookie, CSRF and server-side revocation helpers. JWT signatures do not encrypt their contents. Cookies are HttpOnly, SameSite and configured Secure in production; local development remains loopback-only.
+
+- Browser pages/forms: `/signup`, `/login`, `/dashboard`, POST `/logout`.
+- API: GET `/api/csrf`, POST `/api/signup`, POST `/api/login`, GET `/api/me`, POST `/api/logout`.
+- New accounts are members; role fields are rejected. Wrong credentials use a generic error. Normalized usernames are retained after recoverable form errors; passwords are never reflected or returned.
+- Prepared rate limits apply to signup/login. Logout revokes the server session, so replaying a copied cookie fails.
+- Implementation: `app/features/accounts.py`, `app/templates/account.html`, `app/templates/dashboard.html`.
+- [APP-002 issue #3](https://github.com/dan38-cmyk/my-app-studio/issues/3) verified open with the correct lesson marker; PR pending. Learner reports successful signup, dashboard access, logout and repeat login; they identified improper session invalidation as the bug caught by the copied-cookie/logout test and chose to retain the tested features because they worked as expected. No production deployment, recovery or email-verification feature is claimed.
+
 ## Actual evidence
 
-- Own lesson issue: [#2](https://github.com/dan38-cmyk/my-app-studio/issues/2).
-- Stage-specific full check passed before commit/push: Black, Pylint, 98 foundation tests, 2 APP-001 contracts and 2 actual Chromium tests.
-- Combined local app was previously checked through APP-003; that result does not substitute for this branch check.
-- Predictions were not recorded before implementation; gaps remain explicit in LEARNING.md.
-- GitHub PR, `check` and `windows` CI, merge and issue closure: Pending.
-- Future lessons: APP-002 accounts and APP-003 roles remain outside this branch.
+- Lesson issues: [APP-001 #2](https://github.com/dan38-cmyk/my-app-studio/issues/2), [APP-002 #3](https://github.com/dan38-cmyk/my-app-studio/issues/3).
+- Homepage-only full check passed: Black, Pylint, 98 foundation tests, 2 contracts and 2 Chromium tests.
+- APP-002 stage-specific full check passed before commit/push: Black, Pylint, 98 foundation tests, 14 cumulative contracts and 2 actual Chromium tests.
+- Learner observations, interpretations, decisions and original prediction gaps: LEARNING.md.
+- GitHub PRs, both CI jobs, merges and issue closures: Pending.
+- APP-003 roles remain outside this branch.

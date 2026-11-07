@@ -28,4 +28,11 @@ Short AI-assisted summary, not a transcript or grade. Observations and decisions
 
 ## APP-003
 
-Pending. Role implementation and learner records will be published in their own lesson PR.
+- Prediction: Pending. No pre-implementation direct-admin-request prediction was recorded.
+- Check interpretation: AI-suggested explanation I approved: changing an admin back to a member while staying logged in removed access on the next request, showing that the server checks the current role rather than retaining the old admin permissions until logout.
+- Browser observation: The admin page denied my member account, allowed access after I promoted it through the trusted local CLI, and denied access again after demotion while I stayed logged in.
+- Direct API observation: I also requested `/api/admin` directly and reported denial as a member, access after promotion, and denial after demotion. Exact response bodies/status codes were not recorded from my browser; automated tests cover those separately.
+- Keep decision: Keep the role features because the member/admin behavior worked as expected in my tests.
+- Review: Reviewed for accuracy; publication authorized only after pre-push checks pass. Merge approval has not been given.
+- Help/gaps: AI implemented and tested the server-side permission checks and supplied the local role-change commands and the suggested explanation above. My reported results are separate from the automated checks. The original prediction remains missing.
+- Evidence links / next step: [Issue #4](https://github.com/dan38-cmyk/my-app-studio/issues/4); implementation and actual checks in [SPEC.md](SPEC.md). PR, GitHub CI and merge pending.
